@@ -1,9 +1,3 @@
-# Calculadora Básica JS (PodCodar)
-<div align='center'>
-
-[<img src="./calculadora.jpg" width=500px><br><sub>Calculadora</sub>](https://hebert-santana.github.io/podcodar-calculadora/)
-</div>
-
 ## :1234: Projeto
 
 Projeto desenvolvido durante módulo da trilha de estudos da comunidade [PodCodar](https://podcodar.com/).
