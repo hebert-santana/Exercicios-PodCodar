@@ -1,27 +1,43 @@
-let primeiroJogador = [3, 4, 5, 8, 9, 7];   // sempre escolhe PAR
-let segundoJogador = [2, 2, 1, 5, 9, 3];    // sempre escolhe IMPAR
-let primeiroPontos = 0;
-let segundoPontos = 0;
+const jogador_1 = document.querySelector('.jogador_1');
+const jogador_2 = document.querySelector('.jogador_2');
+const resultadoFinal = document.querySelector('.resultado');
+let pontosJ1 = 0;
+let pontosJ2 = 0;
+let aleatorio = Math.floor(Math.random() * 10);
 
-for (i = 0, j = 0; i < primeiroJogador.length, j < segundoJogador.length; i++, j++) {
-    var resultado = primeiroJogador [i] + segundoJogador[j];
+
+let escolhasJ1 = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];   // sempre escolhe PAR
+let escolhasJ2 = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];    // sempre escolhe IMPAR
+
+jogador_1.innerHTML += escolhasJ1;
+jogador_2.innerHTML += escolhasJ2;
+
+
+for (i = 0, j = 0; i < escolhasJ1.length, j < escolhasJ2.length; i++, j++) {
+    var resultado = escolhasJ1 [i] + escolhasJ2[j];
     if (resultado % 2 < 1) {
-        primeiroPontos++;
+        pontosJ1++;
         console.log("O jogador 01 pontuou.")
     }
     else {
-        segundoPontos++;
+        pontosJ2++;
         console.log("O jogador 02 pontuou.")
     }
 }
 
-alert("Vamos dar o resultado final!")
-if (primeiroPontos > segundoPontos) {
-    alert("O vencedor foi o Jogador 01")
+
+if (pontosJ1 > pontosJ2) {
+    resultadoFinal.innerHTML = "O vencedor foi o Jogador 1."
 }
-else if (primeiroPontos = segundoPontos) {
-    alert("O jogo ficou empatado.")
+else if (pontosJ1 = pontosJ2) {
+    resultadoFinal.innerHTML = "O jogo ficou empatado."
 }
 else {
-    alert("O vencedor foi o jogador 02.")
+    resultadoFinal.innerHTML = "O vencedor foi o Jogador 2."
 }
+
+
+function jogarNovamente(){
+    window.location.reload();
+} 
+
