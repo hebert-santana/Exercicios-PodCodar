@@ -4,10 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Problema de Lógica 04</title>
 </head>
 <body>
 
-<script src="./main.js"></script>
+    <form id="form">
+
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="form__nome" name="nome" placeholder="Digite aqui apenas seu primeiro nome..." required autofocus maxlength="15">
+        <span class="validity"></span>
+
+        <p>Selecione seu sexo: </p>
+        <input type="radio" class="form__sexo" name="sexo" value="1">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" class="form__sexo" name="sexo" value="2">
+        <label for="feminino">Feminino</label>
+        <br><br>
+        
+        <p>Selecione sua idade: </p>
+        <input id='jovem' type="radio" class="form__idade" name="idade" value="1">
+        <label for="jovem">Jovens: 18 a 14 anos</label><br>
+
+        <input id='adulto' type="radio" class="form__idade" name="idade" value="2">
+        <label for="adulto">Adultos: 25 a 55 anos</label><br>
+
+        <input id='idoso' type="radio" class="form__idade" name="idade" value="3">
+        <label for="idoso">Idosos: 56 e 120 anos</label><br>
+
+        <input id='morreu' type="radio" class="form__idade" name="idade" value="4">
+        <label for="morreu">Maior que 120 anos</label>
+        <br><br>
+
+        <p>Selecione o tipo de cobertura desejada: </p>
+        <input type="radio" class="form__cobertura" name="cobertura" value="500">
+        <label for="parcial">Cobertura Parcial</label><br>
+        <input type="radio" class="form__cobertura" name="cobertura" value="800">
+        <label for="total">Cobertura Total</label>
+        <br><br>   
+        
+        <button class='form__botao' onclick="enviarForm()"> ENVIAR </button> 
+       
+    </form>
+    <p class="texto"></p>
+    <script src="./main.js"></script>
+
+
 </body>
 </html>

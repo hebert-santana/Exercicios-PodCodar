@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --cinza: #737380;   
+    --coral: #FC7071;   
+    --font-principal: "Poppins", sans-serif;
+    --font-secundaria: "IBM Plex Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+}
+
+#form {
+    margin: 2rem auto 0 2rem;
+}
+
+#form__nome {
+    width: 24rem;
+    height: 1.8rem;
+    border: 1px solid var(--cinza);
+    margin-bottom: 1.5rem;
+}
+
+.form__sexo {
+    margin: .5rem auto 0 0;
+}
+
+#form__idade {
+    width: 5rem;
+    margin-left: .5rem;
+    height: 1.8rem;
+}
+
+#form__cobertura {
+    width: 5rem;
+    margin-left: .5rem;
+    height: 1.8rem;
+}
+
+input:invalid+span:after {
+    content: '✖';
+    padding-left: 5px;
+}
+
+input:valid+span:after {
+    content: '✓';
+    padding-left: 5px;
+}
+
+.form__botao {
+    width: 10rem;
+    height: 2rem;
+}

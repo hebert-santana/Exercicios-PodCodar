@@ -1,5 +1,5 @@
 const constante = 5 / 9;
-const tFahrenheit = prompt("Digite a temperatura em Fahrenheit:");
+const tFahrenheit = prompt("Digite a temperatura em Fahrenheit: ");
 
 let tCelsius = constante * (tFahrenheit - 32);
 

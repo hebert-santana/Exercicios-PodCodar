@@ -6,10 +6,10 @@ const comprimento = 2 * pi * raio;
 const metragemRolo = 20;
 
 
-let numeroRolos = comprimento / metragemRolo;
+let numeroDeRolos = comprimento / metragemRolo;
 let roloCompra = 0;
 
-while (roloCompra < numeroRolos) {
+while (roloCompra < numeroDeRolos) {
     roloCompra++;
 }
     

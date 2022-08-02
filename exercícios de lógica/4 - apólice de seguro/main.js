@@ -1,72 +1,42 @@
-const sexo = prompt('Digite o número referente ao seu sexo:\n1 - Masculino\n2 - Feminino');
-const idade = prompt('Digite a sua idade (em anos):');
-const cobertura = prompt('Escolha a opção de cobertura desejada:\n1 - Cobertura parcial\n2 - Cobertura total');
+function enviarForm() {
 
-let baseParcial = 500;
-let baseTotal = 800;
+    const nome = document.querySelector('#form__nome').value;
+    const sexo = document.querySelector('input[name="sexo"]:checked').value;
+    const idade = document.querySelector('input[name="idade"]:checked').value;
+    const cobertura = document.querySelector('input[name="cobertura"]:checked').value;
+    const hJovem = 1.07;
+    const idoso = 1.09;
+    const mulher = 0.95;
+   
 
-const jMasculino = 1.07;
-const feminino = 0.95;
-const idoso = 1.09;
-
-if (sexo == 1) {
-    if (idade >= 18 && idade <= 24) {
-        baseParcial = baseParcial * jMasculino;
-        baseTotal = baseTotal * jMasculino;
-        if (cobertura == 1) {
-        alert("Para a sua escolha o valor é R$ " + baseParcial + " .")
-        } 
-        else if (cobertura == 2) {
-            alert("Para a sua escolha o valor é R$ " + baseTotal + " .")
-        }
+    if (idade == 4) {
+        alert("Lamentamos informar, mas talvez você já tenha falecido.")
+    } else if (idade == 3) {
+        if (cobertura == 500) { var preco = cobertura * idoso; alert('Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.')}   
+        else if (cobertura == 800) { var preco = cobertura * idoso; alert('Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.')}
     }
 
-    else if (idade >= 25 && idade <= 55) {
-        if (cobertura == 1) {
-            alert("Para a sua escolha o valor é R$ " + baseParcial + " .")
+    if (sexo == 1) {
+        if (idade == 1) {
+            if (cobertura == 500) { var preco = cobertura * hJovem; alert('Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.')}   
+            else if (cobertura == 800) { var preco = cobertura * hJovem; alert('Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.')}
         }
-        else if (cobertura == 2) {
-            alert("Para a sua escolha o valor é R$ " + baseTotal + " .")
+        else if (idade == 2) {
+            if (cobertura == 500) { var preco = cobertura; alert('Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.')}   
+            else if (cobertura == 800) { var preco = cobertura; alert('Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.')}
         }
+       
     }
 
-    else if (idade >= 56 && idade <= 120) {
-        if (cobertura == 1) {
-            baseParcial = baseParcial * idoso;
-            alert("Para a sua escolha o valor é R$ " + baseParcial + " .")
+    else if (sexo == 2) {
+        if (idade == 1 || idade == 2) {
+            if (cobertura == 500) { var preco = cobertura * mulher; alert('Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.')}   
+            else if (cobertura == 800) { var preco = cobertura * mulher; alert('Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.')}
         }
-        else if (cobertura == 2) {
-            baseTotal = baseTotal * idoso;
-            alert("Para a sua escolha o valor é R$ " + baseTotal + " .")
-        }
-    }
-    else if (idade > 120) {
-    alert("Lamentamos informar, mas talvez o senhor já tenha falecido.")
     }
 }
 
-else if (sexo == 2) {
-    if (idade >= 18 && idade <= 55) {
-        baseParcial = baseParcial * feminino;
-        baseTotal = baseTotal * feminino;
-        if (cobertura == 1) {
-            alert("Para a sua escolha o valor é R$ " + baseParcial + " .")
-        } 
-        else if (cobertura == 2) {
-            alert("Para a sua escolha o valor é R$ " + baseTotal + " .")
-        }
-    }
-    else if (idade >= 56 && idade <= 120) {
-        if (cobertura == 1) {
-            baseParcial = baseParcial * idoso;
-            alert("Para a sua escolha o valor é R$ " + baseParcial + " .")
-        }
-        else if (cobertura == 2) {
-            baseTotal = baseTotal * idoso;
-            alert("Para a sua escolha o valor é R$ " + baseTotal + " .")
-        } 
-    }
-    else if (idade > 120) {
-        alert("Lamentamos informar, mas talvez a senhora já tenha falecido.")
-    }
-}
+
+
+
+
