@@ -1,4 +1,5 @@
-function enviarForm() {
+document.querySelector('#form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
     const nome = document.querySelector('#form__nome').value;
     const sexo = document.querySelector('input[name="sexo"]:checked').value;
@@ -35,7 +36,11 @@ function enviarForm() {
             else if (cobertura == 800) { var preco = cobertura * mulher; resultado.innerHTML = 'Olá, ' + nome + '.\nO valor da cobertura para você é: R$' + preco + '.'}
         }
     }
-}
+   
+ });
+
+
+
 
 
 
