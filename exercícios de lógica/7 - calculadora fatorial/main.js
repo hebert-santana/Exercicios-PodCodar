@@ -1,14 +1,16 @@
-let n = parseFloat(prompt("Digite o número para o qual quer calcular seu fatorial:"))
-// parseFloat analisa um valor como uma string e retorna o primeiro número
-console.log(n);
+document.querySelector('.form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    let numero = parseFloat(document.querySelector('#form__numero').value);
+    const resultadoFinal = document.querySelector('.resultado');
 
-
-function fatorial (numero) {
+    function fatorial(numero) {
         let resultado = numero;
-    for (let i = 1; i < numero; i++) {
-        resultado = resultado * i
+        for (let i = 1; i < numero; i++) {
+            resultado = resultado * i
+        }
+        return resultado
     }
-    return resultado
-}
 
-alert("O fatorial de " + n + " é " + fatorial(n))
+    resultadoFinal.innerHTML = "O fatorial de " + numero + " é " + fatorial(numero) +"."
+
+});
