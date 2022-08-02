@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Palavras Ordenadas</title>
 </head>
-<body>    
+<body> 
+    <form class="form">
+        <p>Forneça a palavra que deseja verificar: </p>
+        <input id='form__palavra' type="text" name="palavra" placeholder="Digite aqui a palavra..." autofocus><br><br>
+        <input class='form__enviar' type="submit" value="enviar palavra">
+        <div class="exibir">
+            <ul id="exibir__lista">
+            </ul>
+        </div>
+    </form>
 
 <script src="./main.js"></script>   
 </body>
