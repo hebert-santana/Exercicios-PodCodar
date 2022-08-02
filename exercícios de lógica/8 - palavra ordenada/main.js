@@ -12,8 +12,6 @@ document.querySelector('.form').addEventListener('submit', function (e) {
     document.getElementById("exibir__lista").appendChild(node);
 
 
-
-
     function ordenada (palavra) {
         let ordenadasContador = 0;    
         for (let i = 0; i < (palavra.length - 1); i++) {
@@ -21,8 +19,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
             if (palavra [i+1] > palavra [i]) {
                 ordenadasContador++;
             }
-        }
-    
+        }    
         if (ordenadasContador == (palavra.length -1)) {
             return true
         } else {

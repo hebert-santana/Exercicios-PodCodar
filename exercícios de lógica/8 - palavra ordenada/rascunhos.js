@@ -63,3 +63,6 @@ function ordenada (palavra) {
         console.log(`a palavra ${palavra} não é Ordenada.`)
     }
 }
+
+
+textnode = document.createTextNode(`A palavra digitada foi: ${palavra} e ela NÃO É ORDENADA`);
